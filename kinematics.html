@@ -1,0 +1,994 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Classical Mechanics - Kinematics</title>
+		<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+	</head>
+	<body>
+		<h2>Kinematics</h2>
+		<h3>Three-dimensional space</h3>
+		<p>
+			Given a <em>cartesian coordinate system</em>, 
+			a <em>point</em> in three-dimensional space can be represented by a vector
+		</p>
+		<math>
+			<mover><mi>r</mi><mo>&rharu;</mo></mover>
+			<mo>=</mo>
+			<mi>x</mi><mo>&middot;</mo><mover><mn>x</mn><mo>^</mo></mover>
+			<mo>+</mo>
+			<mi>y</mi><mo>&middot;</mo><mover><mn>y</mn><mo>^</mo></mover>
+			<mo>+</mo>
+			<mi>z</mi><mo>&middot;</mo><mover><mn>z</mn><mo>^</mo></mover>
+			<mo>=</mo>
+			<mfenced open="(" close=")">
+				<mtable>
+					<mtr><mtd><mi>x</mi></mtd></mtr>
+					<mtr><mtd><mi>y</mi></mtd></mtr>
+					<mtr><mtd><mi>z</mi></mtd></mtr>
+				</mtable>
+			</mfenced>
+			<mo>&isin;</mo>
+			<msup>
+				<mn>&reals;</mn>
+				<mn>3</mn>
+			</msup>
+		</math>
+		<p>
+			where <math><mi>x</mi></math>, <math><mi>y</mi></math> and <math><mi>z</mi></math>
+			denote the coordinates of this point and <math><mover><mn>x</mn><mo>^</mo></mover></math>,
+			<math><mover><mn>y</mn><mo>^</mo></mover></math> and <math><mover><mn>z</mn><mo>^</mo></mover></math>
+			are orthonormal basis vectors.
+		</p>
+		<p>
+			A vector 
+			<math>
+				<mover><mi>v</mi><mo>&rharu;</mo></mover> 
+				<mo>=</mo>
+				<mo>(</mo>
+					<msub><mi>v</mi><mn>x</mn></msub>
+				<mo>,</mo>
+					<msub><mi>v</mi><mn>y</mn></msub>
+				<mo>,</mo>
+					<msub><mi>v</mi><mn>z</mn></msub>
+				<mo>)</mo>
+			</math>
+			can be multiplied by a scalars and added to other vectors, 
+			so that <em>linear combinations</em> can be constructed
+		</p>
+		<math>
+			<mover><mi>w</mi><mo>&rharu;</mo></mover> 
+			<mo>=</mo>
+			<mi>&alpha;</mi> 
+			<mo>&middot;</mo>
+			<mover><mi>v</mi><mo>&rharu;</mo></mover> 
+			<mo>+</mo>
+			<mi>&beta;</mi> 
+			<mo>&middot;</mo>
+			<mover><mi>u</mi><mo>&rharu;</mo></mover> 
+			<mo>=</mo>
+			<mfenced open="(" close=")">
+				<mtable>
+					<mtr><mtd>
+						<mi>&alpha;</mi> 
+						<mo>&middot;</mo>
+						<msub><mi>v</mi><mn>x</mn></msub>
+						<mo>+</mo>
+						<mi>&beta;</mi> 
+						<mo>&middot;</mo>
+						<msub><mi>u</mi><mn>x</mn></msub>
+					</mtd></mtr>
+					<mtr><mtd>
+						<mi>&alpha;</mi> 
+						<mo>&middot;</mo>
+						<msub><mi>v</mi><mn>y</mn></msub>
+						<mo>+</mo>
+						<mi>&beta;</mi> 
+						<mo>&middot;</mo>
+						<msub><mi>u</mi><mn>y</mn></msub>
+					</mtd></mtr>
+					<mtr><mtd>
+						<mi>&alpha;</mi> 
+						<mo>&middot;</mo>
+						<msub><mi>v</mi><mn>z</mn></msub>
+						<mo>+</mo>
+						<mi>&beta;</mi> 
+						<mo>&middot;</mo>
+						<msub><mi>u</mi><mn>z</mn></msub>
+					</mtd></mtr>
+				</mtable>
+			</mfenced>
+			<mo>&isin;</mo>
+			<msup>
+				<mn>&reals;</mn>
+				<mn>3</mn>
+			</msup>
+			<mo>,</mo>
+			<mspace width="1em"/>
+			<mo>&alpha;</mo>
+			<mo>,</mo>
+			<mo>&beta;</mo>
+			<mo>&isin;</mo>
+			<mn>&reals;</mn>
+			<mo>,</mo>
+			<mspace width="1em"/>
+			<mover><mi>v</mi><mo>&rharu;</mo></mover> 
+			<mo>,</mo>
+			<mover><mi>u</mi><mo>&rharu;</mo></mover> 
+			<mo>&isin;</mo>
+			<msup>
+				<mn>&reals;</mn>
+				<mn>3</mn>
+			</msup>
+		</math>
+		<p>
+			Vectors can also be multiplied by the <em>dot product</em> and the <em>cross product</em>
+		</p>
+		<math>
+			<mover><mi>v</mi><mo>&rharu;</mo></mover> 
+			<mo>&middot;</mo>
+			<mover><mi>u</mi><mo>&rharu;</mo></mover> 
+			<mo>=</mo>
+			<mfenced open="(" close=")">
+				<mtable>
+					<mtr><mtd>
+						<msub><mi>v</mi><mn>x</mn></msub>
+					</mtd></mtr>
+					<mtr><mtd>
+						<msub><mi>v</mi><mn>y</mn></msub>
+					</mtd></mtr>
+					<mtr><mtd>
+						<msub><mi>v</mi><mn>z</mn></msub>
+					</mtd></mtr>
+				</mtable>
+			</mfenced>
+			<mo>&middot;</mo>
+			<mfenced open="(" close=")">
+				<mtable>
+					<mtr><mtd>
+						<msub><mi>u</mi><mn>x</mn></msub>
+					</mtd></mtr>
+					<mtr><mtd>
+						<msub><mi>u</mi><mn>y</mn></msub>
+					</mtd></mtr>
+					<mtr><mtd>
+						<msub><mi>u</mi><mn>z</mn></msub>
+					</mtd></mtr>
+				</mtable>
+			</mfenced>
+			<mo>=</mo>
+			<msub><mi>v</mi><mn>x</mn></msub>
+			<mo>&middot;</mo>
+			<msub><mi>u</mi><mn>x</mn></msub>
+			<mo>+</mo>
+			<msub><mi>v</mi><mn>y</mn></msub>
+			<mo>&middot;</mo>
+			<msub><mi>u</mi><mn>y</mn></msub>
+			<mo>+</mo>
+			<msub><mi>v</mi><mn>z</mn></msub>
+			<mo>&middot;</mo>
+			<msub><mi>u</mi><mn>z</mn></msub>
+			<mo>&isin;</mo>
+			<mn>&reals;</mn>
+		</math>
+		<br>
+		<math>
+			<mover><mi>v</mi><mo>&rharu;</mo></mover> 
+			<mo>&times;</mo>
+			<mover><mi>u</mi><mo>&rharu;</mo></mover> 
+			<mo>=</mo>
+			<mfenced open="(" close=")">
+				<mtable>
+					<mtr><mtd>
+						<msub><mi>v</mi><mn>x</mn></msub>
+					</mtd></mtr>
+					<mtr><mtd>
+						<msub><mi>v</mi><mn>y</mn></msub>
+					</mtd></mtr>
+					<mtr><mtd>
+						<msub><mi>v</mi><mn>z</mn></msub>
+					</mtd></mtr>
+				</mtable>
+			</mfenced>
+			<mo>&times;</mo>
+			<mfenced open="(" close=")">
+				<mtable>
+					<mtr><mtd>
+						<msub><mi>u</mi><mn>x</mn></msub>
+					</mtd></mtr>
+					<mtr><mtd>
+						<msub><mi>u</mi><mn>y</mn></msub>
+					</mtd></mtr>
+					<mtr><mtd>
+						<msub><mi>u</mi><mn>z</mn></msub>
+					</mtd></mtr>
+				</mtable>
+			</mfenced>
+			<mo>=</mo>
+			<mfenced open="(" close=")">
+				<mtable>
+					<mtr><mtd>
+						<msub><mi>v</mi><mn>y</mn></msub>
+						<msub><mi>u</mi><mn>z</mn></msub>
+						<mo>-</mo>
+						<msub><mi>v</mi><mn>z</mn></msub>
+						<msub><mi>u</mi><mn>y</mn></msub>
+					</mtd></mtr>
+					<mtr><mtd>
+						<msub><mi>v</mi><mn>z</mn></msub>
+						<msub><mi>u</mi><mn>x</mn></msub>
+						<mo>-</mo>
+						<msub><mi>v</mi><mn>x</mn></msub>
+						<msub><mi>u</mi><mn>z</mn></msub>
+					</mtd></mtr>
+					<mtr><mtd>
+						<msub><mi>v</mi><mn>x</mn></msub>
+						<msub><mi>u</mi><mn>y</mn></msub>
+						<mo>-</mo>
+						<msub><mi>v</mi><mn>y</mn></msub>
+						<msub><mi>u</mi><mn>x</mn></msub>
+					</mtd></mtr>
+				</mtable>
+			</mfenced>
+			<mo>&isin;</mo>
+			<msup>
+				<mn>&reals;</mn>
+				<mn>3</mn>
+			</msup>
+		</math>
+		<p>
+			The distance <math><msub><mi>d</mi><mn>AB</mn></msub></math> 
+			between two points <math><mn>A</mn></math> and <math><mn>B</mn></math> in space
+			results from the absolute value of the difference vector
+		</p>
+		<math>
+			<msub><mi>d</mi><mn>AB</mn></msub>
+			<mo>=</mo>
+			<mo>|</mo>
+			<mover><msub><mi>r</mi><mn>B</mn></msub><mo>&rharu;</mo></mover>
+			<mo>-</mo>
+			<mover><msub><mi>r</mi><mn>A</mn></msub><mo>&rharu;</mo></mover>
+			<mo>|</mo>
+			<mo>=</mo>
+			<msqrt>
+				<mo>(</mo>
+				<mover><msub><mi>r</mi><mn>B</mn></msub><mo>&rharu;</mo></mover>
+				<mo>-</mo>
+				<mover><msub><mi>r</mi><mn>A</mn></msub><mo>&rharu;</mo></mover>
+				<mo>)</mo>
+				<mo>&middot;</mo>
+				<mo>(</mo>
+				<mover><msub><mi>r</mi><mn>B</mn></msub><mo>&rharu;</mo></mover>
+				<mo>-</mo>
+				<mover><msub><mi>r</mi><mn>A</mn></msub><mo>&rharu;</mo></mover>
+				<mo>)</mo>
+			</msqrt>
+			<mo>=</mo>
+			<msqrt>
+				<msup>
+					<mrow>
+						<mo>(</mo>
+						<msub><mi>x</mi><mn>B</mn></msub>
+						<mo>-</mo>
+						<msub><mi>x</mi><mn>A</mn></msub>
+						<mo>)</mo>
+					</mrow>
+					<mn>2</mn>
+				</msup>
+				<mo>+</mo>
+				<msup>
+					<mrow>
+						<mo>(</mo>
+						<msub><mi>y</mi><mn>B</mn></msub>
+						<mo>-</mo>
+						<msub><mi>y</mi><mn>A</mn></msub>
+						<mo>)</mo>
+					</mrow>
+					<mn>2</mn>
+				</msup>
+				<mo>+</mo>
+				<msup>
+					<mrow>
+						<mo>(</mo>
+						<msub><mi>z</mi><mn>B</mn></msub>
+						<mo>-</mo>
+						<msub><mi>z</mi><mn>A</mn></msub>
+						<mo>)</mo>
+					</mrow>
+					<mn>2</mn>
+				</msup>
+			</msqrt>
+		</math>
+		<p>
+			This is the <em>Pythagorean Theorem</em> in three dimensions.
+		</p>
+		
+		<h3>Trajectory of particle</h3>
+		<p>
+			The position 
+			<math>
+				<mover><mi>r</mi><mo>&rharu;</mo></mover>
+			</math>
+			of a moving particle changes with the <em>time</em> <math><mi>t</mi></math>.
+			Therefore, its <em>trajectory</em> is described by a vector-valued function:
+		</p>
+		<math>
+			<mi>t</mi>
+			<mo>&isin;</mo>
+			<mn>&reals;</mn>
+			<mo>&mapsto;</mo>
+			<mover><mi>r</mi><mo>&rharu;</mo></mover>
+			<mi>(t)</mi>
+			<mo>=</mo>
+			<mfenced open="(" close=")">
+				<mtable>
+					<mtr><mtd>
+						<mi>x</mi><mo>(</mo><mi>t</mi><mo>)</mo>
+					</mtd></mtr>
+					<mtr><mtd>
+						<mi>y</mi><mo>(</mo><mi>t</mi><mo>)</mo>
+					</mtd></mtr>
+					<mtr><mtd>
+						<mi>z</mi><mo>(</mo><mi>t</mi><mo>)</mo>
+					</mtd></mtr>
+				</mtable>
+			</mfenced>
+			<mo>&isin;</mo>
+			<msup>
+				<mn>&reals;</mn>
+				<mn>3</mn>
+			</msup>
+		</math>
+		<p>
+			where the coordinates 
+			<math><mi>x</mi><mo>(</mo><mi>t</mi><mo>)</mo></math>, 
+			<math><mi>y</mi><mo>(</mo><mi>t</mi><mo>)</mo></math> 
+			and <math><mi>z</mi><mo>(</mo><mi>t</mi><mo>)</mo></math> 
+			are functions of the time <math><mi>t</mi></math>.
+		</p>
+		<p>
+			The set of all visited points
+			<math>
+				<mo>{</mo>
+					<mover><mi>r</mi><mo>&rharu;</mo></mover>
+					<mo>(</mo><mi>t</mi><mo>)</mo>
+				<mo>|</mo>
+					<mi>t</mi>
+					<mo>&isin;</mo>
+					<mn>&reals;</mn>
+				<mo>}</mo>
+			</math>
+			describes a certain curve in space.
+		</p>
+		<p>
+			In case of <em>periodic motion</em> there is <em>time period</em> <math><mi>T</mi></math>, such that 
+			<math>
+				<mover><mi>r</mi><mo>&rharu;</mo></mover>
+					<mo>(</mo><mi>t</mi><mo>+</mo><mi>T</mi><mo>)</mo>
+				<mo>=</mo>
+				<mover><mi>r</mi><mo>&rharu;</mo></mover>
+					<mo>(</mo><mi>t</mi><mo>)</mo>
+			</math>
+			for all times <math><mi>t</mi></math>.
+		</p>
+		
+		<h4>Uniform motion</h4>
+		<p>
+			A simple example for an non-trivial trajectory is the uniform motion with constant velocity:
+		<p>
+		<math>
+			<mover><mi>r</mi><mo>&rharu;</mo></mover>
+			<mi>(t)</mi>
+			<mo>=</mo>
+			<msub><mover><mi>r</mi><mo>&rharu;</mo></mover><mn>0</mn></msub>
+			<mo>+</mo>
+			<mover><mi>v</mi><mo>&rharu;</mo></mover>
+			<mo>&middot;</mo>
+			<mi>t</mi>
+			<mo>=</mo>
+			<mfenced open="(" close=")">
+				<mtable>
+					<mtr><mtd>
+						<msub><mi>x</mi><mn>0</mn></msub>
+					</mtd></mtr>
+					<mtr><mtd>
+						<msub><mi>y</mi><mn>0</mn></msub>
+					</mtd></mtr>
+					<mtr><mtd>
+						<msub><mi>z</mi><mn>0</mn></msub>
+					</mtd></mtr>
+				</mtable>
+			</mfenced>
+			<mo>+</mo>
+			<mfenced open="(" close=")">
+				<mtable>
+					<mtr><mtd>
+						<msub><mi>v</mi><mn>x</mn></msub>
+					</mtd></mtr>
+					<mtr><mtd>
+						<msub><mi>v</mi><mn>y</mn></msub>
+					</mtd></mtr>
+					<mtr><mtd>
+						<msub><mi>v</mi><mn>z</mn></msub>
+					</mtd></mtr>
+				</mtable>
+			</mfenced>
+			<mo>&middot;</mo>
+			<mi>t</mi>
+			<mo>=</mo>
+			<mfenced open="(" close=")">
+				<mtable>
+					<mtr><mtd>
+						<msub><mi>x</mi><mn>0</mn></msub>
+						<mo>+</mo>
+						<msub><mi>v</mi><mn>x</mn></msub>
+						<mo>&middot;</mo>
+						<mo>t</mo>
+					</mtd></mtr>
+					<mtr><mtd>
+						<msub><mi>y</mi><mn>0</mn></msub>
+						<mo>+</mo>
+						<msub><mi>v</mi><mn>y</mn></msub>
+						<mo>&middot;</mo>
+						<mo>t</mo>
+					</mtd></mtr>
+					<mtr><mtd>
+						<msub><mi>z</mi><mn>0</mn></msub>
+						<mo>+</mo>
+						<msub><mi>v</mi><mn>z</mn></msub>
+						<mo>&middot;</mo>
+						<mo>t</mo>
+					</mtd></mtr>
+				</mtable>
+			</mfenced>	
+		</math>
+		<p>
+			where 
+			<math>
+				<msub><mover><mi>r</mi><mo>&rharu;</mo></mover><mn>0</mn></msub>
+				<mo>=</mo>
+				<mover><mi>r</mi><mo>&rharu;</mo></mover><mi>(0)</mi>
+			</math>
+			is the intial position of the particle at the time 
+			<math>
+				<mi>t</mi><mo>=</mo><mn>0</mo>
+			</math>
+			and 
+			<math>
+				<mover><mi>v</mi><mo>&rharu;</mo></mover>
+			</math>
+			is the velocity at which it moves.
+		</p>
+		<p>
+			The curve of this trajectory is a straight line.
+		</p>
+		
+		<h3>Velocity</h3>
+		<p>
+			The velocity of a particle is the rate of change of its position.
+		</p>
+		<p>
+			For a certain time interval
+			<math>
+				<mo>[</mo>
+				<msub><mi>t</mi><mn>1</mn></msub>
+				<mo>,</mo>
+				<msub><mi>t</mi><mn>2</mn></msub>
+				<mo>]</mo>
+			</math>
+			the <em>average velocity</em> ist defined by the difference quotient:
+		</p>
+		<math>
+			<mo><</mo>
+			<mover><mi>v</mi><mo>&rharu;</mo></mover>
+			<mo>></mo>
+			<mo>=</mo>
+			<mfrac>
+				<mrow>
+					<mo>&Delta;</mo>
+					<mover><mi>r</mi><mo>&rharu;</mo></mover>
+				</mrow>
+				<mrow>
+					<mo>&Delta;</mo>
+					<mi>t</mi>
+				</mrow>
+			</mfrac>
+			<mo>:=</mo>
+			<mfrac>
+				<mrow>
+					<mover><mi>r</mi><mo>&rharu;</mo></mover>
+					<mo>(</mo><msub><mi>t</mi><mn>2</mn></msub><mo>)</mo>
+					<mo>-</mo>
+					<mover><mi>r</mi><mo>&rharu;</mo></mover>
+					<mo>(</mo><msub><mi>t</mi><mn>1</mn></msub><mo>)</mo>
+				</mrow>
+				<mrow>
+					<msub><mi>t</mi><mn>2</mn></msub>
+					<mo>-</mo>
+					<msub><mi>t</mi><mn>1</mn></msub>
+				</mrow>
+			</mfrac>
+			<mo>=</mo>
+			<mfrac>
+				<mn>1</mn>
+				<mrow>
+					<msub><mi>t</mi><mn>2</mn></msub>
+					<mo>-</mo>
+					<msub><mi>t</mi><mn>1</mn></msub>
+				</mrow>
+			</mfrac>
+			<mfenced open="(" close=")">
+				<mtable>
+					<mtr><mtd>
+						<mi>x</mi><mo>(</mo><msub><mi>t</mi><mn>2</mn></msub><mo>)</mo>
+						<mo>-</mo>
+						<mi>x</mi><mo>(</mo><msub><mi>t</mi><mn>1</mn></msub><mo>)</mo>
+					</mtd></mtr>
+					<mtr><mtd>
+						<mi>y</mi><mo>(</mo><msub><mi>t</mi><mn>2</mn></msub><mo>)</mo>
+						<mo>-</mo>
+						<mi>y</mi><mo>(</mo><msub><mi>t</mi><mn>1</mn></msub><mo>)</mo>
+					</mtd></mtr>
+					<mtr><mtd>
+						<mi>z</mi><mo>(</mo><msub><mi>t</mi><mn>2</mn></msub><mo>)</mo>
+						<mo>-</mo>
+						<mi>z</mi><mo>(</mo><msub><mi>t</mi><mn>1</mn></msub><mo>)</mo>
+					</mtd></mtr>
+				</mtable>
+			</mfenced>
+		</math>
+		<p>
+			The absolute value
+			<math>
+				<mo><</mo>
+					<mi>v</mi>
+				<mo>></mo>
+				<mo>=</mo>
+				<msqrt>
+					<mo><</mo>
+						<mover><mi>v</mi><mo>&rharu;</mo></mover>
+					<mo>></mo>
+					<mo>&middot;</mo>
+					<mo><</mo>
+						<mover><mi>v</mi><mo>&rharu;</mo></mover>
+					<mo>></mo>
+				</msqrt>
+			</math>
+			is the <em>average speed</em> of the particle.
+		</p>
+			The <em>instantaneous velocity</em> of a particle at a certain time <math><mi>t</mi></math> results in the limit
+			<math>
+				<mo>&Delta;</mo><mi>t</mi>
+				<mo>=</mo>
+				<msub><mi>t</mi><mn>2</mn></msub>
+				<mo>-</mo>
+				<msub><mi>t</mi><mn>1</mn></msub>
+				<mo>&rarr;</mo>
+				<mn>0</mn>
+			</math>
+			so that it is given by the time derivative of the position vector:
+		<p>
+		<math>
+			<mover><mi>v</mi><mo>&rharu;</mo></mover>
+			<mi>(t)</mi>
+			<mo>=</mo>
+			<mfenced open="(" close=")">
+				<mtable>
+				  <mtr><mtd><msub><mi>v</mi><mi>x</mi></msub><mi>(t)</mi></mtd></mtr>
+				  <mtr><mtd><msub><mi>v</mi><mi>y</mi></msub><mi>(t)</mi></mtd></mtr>
+				  <mtr><mtd><msub><mi>v</mi><mi>z</mi></msub><mi>(t)</mi></mtd></mtr>
+				</mtable>
+			</mfenced>
+			<mo>:=</mo>
+			<msub>
+				<mo>lim</mo>
+				<mrow>
+					<mo>&Delta;</mo><mi>t</mi><mo>&rarr;</mo><mn>0</mn>
+				</mrow>
+			</msub>
+			<mfrac>
+				<mrow>
+					<mo>&Delta;</mo>
+					<mover><mi>r</mi><mo>&rharu;</mo></mover>
+				</mrow>
+				<mrow>
+					<mo>&Delta;</mo>
+					<mi>t</mi>
+				</mrow>
+			</mfrac>
+			<mo>=</mo>
+			<mover>
+				<mover><mi>r</mi><mo>&rharu;</mo></mover>
+				<mo>&bull;</mo>
+			</mover>
+			<mi>(t)</mi>
+			<mo>=</mo>
+			<mfrac>
+				<mrow>
+					<mo>d</mo>
+					<mover><mi>r</mi><mo>&rharu;</mo></mover>
+					<mi>(t)</mi>
+				</mrow>
+				<mrow>
+					<mo>d</mo>
+					<mi>t</mi>
+				</mrow>
+			</mfrac>
+			<mo>=</mo>
+			<mfenced open="(" close=")">
+				<mtable>
+				  <mtr><mtd><mover><mi>x</mi><mo>&bull;</mo></mover><mi>(t)</mi></mtd></mtr>
+				  <mtr><mtd><mover><mi>y</mi><mo>&bull;</mo></mover><mi>(t)</mi></mtd></mtr>
+				  <mtr><mtd><mover><mi>z</mi><mo>&bull;</mo></mover><mi>(t)</mi></mtd></mtr>
+				</mtable>
+			</mfenced>
+			<mo>=</mo>
+			<mfenced open="(" close=")">
+				<mtable>
+					<mtr>
+						<mtd>
+							<mfrac>
+								<mrow><mo>d</mo><mi>x(t)</mi></mrow>
+								<mrow><mo>d</mo><mi>t</mi></mrow>
+							</mfrac>
+						</mtd>
+					</mtr>
+					<mtr>
+						<mtd>
+							<mfrac>
+								<mrow><mo>d</mo><mi>y(t)</mi></mrow>
+								<mrow><mo>d</mo><mi>t</mi></mrow>
+							</mfrac>
+						</mtd>
+					</mtr>
+					<mtr>
+						<mtd>
+							<mfrac>
+								<mrow><mo>d</mo><mi>z(t)</mi></mrow>
+								<mrow><mo>d</mo><mi>t</mi></mrow>
+							</mfrac>
+						</mtd>
+					</mtr>
+				</mtable>
+			</mfenced>
+			<mo>&isin;</mo>
+			<msup>
+				<mn>&reals;</mn>
+				<mn>3</mn>
+			</msup>
+		</math>
+		<p>
+			The absolute value 
+			<math>
+				<mi>v</mi><mo>=</mo><mo>|</mo><mover><mi>v</mi><mo>&rharu;</mo></mover><mo>|</mo><mo>=</mo>
+				<msqrt><mover><mi>v</mi><mo>&rharu;</mo></mover><mo>&middot;</mo><mover><mi>v</mi><mo>&rharu;</mo></mover></msqrt>
+			</math>
+			of the velocity is the <em>instantaneous speed</em> of the particle.
+		</p>
+		<p>
+			The velocity vector 
+			<math>
+				<mover><mi>v</mi><mo>&rharu;</mo></mover><mo>=</mo>
+				<mi>v</mi><mo>&middot;</mo><mover><mn>t</mn><mo>^</mo></mover>
+			</math>
+			is tangential to the trajectory and points towards the movement direction.
+		</p>
+		<p>
+			Only in for uniform motion both the average and instantaneous velocity are the same.
+		</p>
+		
+		<h3>Acceleration</h3>
+		
+		<p>
+			The acceleration of a particle is the rate of change of its velocity. 
+			It is defined by the time derivative of the velocity:
+		<p>
+		<math>
+			<mover><mi>a</mi><mo>&rharu;</mo></mover>
+			<mi>(t)</mi>
+			<mo>=</mo>
+			<mfenced open="(" close=")">
+				<mtable>
+				  <mtr><mtd><msub><mi>a</mi><mi>x</mi></msub><mi>(t)</mi></mtd></mtr>
+				  <mtr><mtd><msub><mi>a</mi><mi>y</mi></msub><mi>(t)</mi></mtd></mtr>
+				  <mtr><mtd><msub><mi>a</mi><mi>z</mi></msub><mi>(t)</mi></mtd></mtr>
+				</mtable>
+			</mfenced>
+			<mo>:=</mo>
+			<mfrac>
+				<mrow>
+					<mo>d</mo>
+					<mover><mi>v</mi><mo>&rharu;</mo></mover>
+					<mi>(t)</mi>
+				</mrow>
+				<mrow>
+					<mo>d</mo>
+					<mi>t</mi>
+				</mrow>
+			</mfrac>
+			<mo>=</mo>
+			<mfenced open="(" close=")">
+				<mtable>
+				  <mtr><mtd><msub><mover><mi>v</mi><mo>&bull;</mo></mover><mo>x</mo></msub><mi>(t)</mi></mtd></mtr>
+				  <mtr><mtd><msub><mover><mi>v</mi><mo>&bull;</mo></mover><mo>y</mo></msub><mi>(t)</mi></mtd></mtr>
+				  <mtr><mtd><msub><mover><mi>v</mi><mo>&bull;</mo></mover><mo>z</mo></msub><mi>(t)</mi></mtd></mtr>
+				</mtable>
+			</mfenced>
+			<mo>=</mo>
+			<mfenced open="(" close=")">
+				<mtable>
+					<mtr>
+						<mtd>
+							<mfrac>
+								<mrow><mo>d</mo><mi>x(t)</mi></mrow>
+								<mrow><mo>d</mo><mi>t</mi></mrow>
+							</mfrac>
+						</mtd>
+					</mtr>
+					<mtr>
+						<mtd>
+							<mfrac>
+								<mrow><mo>d</mo><mi>y(t)</mi></mrow>
+								<mrow><mo>d</mo><mi>t</mi></mrow>
+							</mfrac>
+						</mtd>
+					</mtr>
+					<mtr>
+						<mtd>
+							<mfrac>
+								<mrow><mo>d</mo><mi>z(t)</mi></mrow>
+								<mrow><mo>d</mo><mi>t</mi></mrow>
+							</mfrac>
+						</mtd>
+					</mtr>
+				</mtable>
+			</mfenced>
+			<mo>&isin;</mo>
+			<msup>
+				<mn>&reals;</mn>
+				<mn>3</mn>
+			</msup>
+		</math>
+		<p>
+			The acceleration is composed of two components, with are tangent and perpendicular to the trajectory:
+		</p>
+		<math>
+			<mover><mi>a</mi><mo>&rharu;</mo></mover>
+			<mi>(t)</mi>
+			<mo>=</mo>
+			<mfrac>
+				<mo>d</mo>
+				<mrow><mo>d</mo><mi>t</mi></mrow>
+			</mfrac>
+			<mo>(</mo>
+				<mi>v</mi><mo>&middot;</mo><mover><mn>t</mn><mo>^</mo></mover>
+			<mo>)</mo>
+			<mo>=</mo>
+			<mfrac>
+				<mrow><mo>d</mo><mi>v</mi></mrow>
+				<mrow><mo>d</mo><mi>t</mi></mrow>
+			</mfrac>
+			<mo>&middot;</mo><mover><mn>t</mn><mo>^</mo></mover>
+			<mo>+</mo>
+			<mi>v</mi><mo>&middot;</mo>
+			<mfrac>
+				<mrow><mo>d</mo><mover><mn>t</mn><mo>^</mo></mover></mrow>
+				<mrow><mo>d</mo><mi>t</mi></mrow>
+			</mfrac>
+			<mo>=</mo>
+			<mfrac>
+				<mrow><mo>d</mo><mi>v</mi></mrow>
+				<mrow><mo>d</mo><mi>t</mi></mrow>
+			</mfrac>
+			<mo>&middot;</mo><mover><mn>t</mn><mo>^</mo></mover>
+			<mo>+</mo>
+			<mfrac>
+				<msup><mi>v</mi><mn>2</mn></msup>
+				<mi>R</mi>
+			</mfrac>
+			<mo>&middot;</mo><mover><mn>n</mn><mo>^</mo></mover>
+		</math>
+		<p>
+			where <math><mover><mn>n</mn><mo>^</mo></mover></math> is the normal unit vector and 
+			<math><mi>R</mi></math> denotes the radius of curvature of the trajectory.
+		</p>
+	
+		<h4>Uniform acceleration</h4>
+		<p>
+			In this case the acceleration is time-independent.
+			Velocity and position can be derived by time integration:
+		</p>
+		<math>
+			<mover><mi>a</mi><mo>&rharu;</mo></mover> 
+			<mi>(t)</mi>
+			<mo>=</mo>
+			<msub><mover><mi>a</mi><mo>&rharu;</mo></mover><mn>0</mn></msub>
+			<mo>=</mo>
+			<mo>const</mo>
+		</math>
+		<br>
+		<math>
+			<mover><mi>v</mi><mo>&rharu;</mo></mover> 
+			<mi>(t)</mi>
+			<mo>=</mo>
+			<munderover>
+				<mo>&int;</mo><mn>0</mn><mn>t</mn>
+			</munderover>
+			<mover><mi>a</mi><mo>&rharu;</mo></mover> 
+			<mi>(t)</mi>
+			<mo>d</mo><mi>t</mi>
+			<mo>+</mo>
+			<msub><mover><mi>v</mi><mo>&rharu;</mo></mover><mn>0</mn></msub>
+			<mo>=</mo>
+			<msub><mover><mi>a</mi><mo>&rharu;</mo></mover><mn>0</mn></msub>
+			<mo>&middot;</mo>
+			<mi>t</mi>
+			<mo>+</mo>
+			<msub><mover><mi>v</mi><mo>&rharu;</mo></mover><mn>0</mn></msub>
+		</math>
+		<br>
+		<math>
+			<mover><mi>r</mi><mo>&rharu;</mo></mover> 
+			<mi>(t)</mi>
+			<mo>=</mo>
+			<munderover>
+				<mo>&int;</mo><mn>0</mn><mn>t</mn>
+			</munderover>
+			<mover><mi>v</mi><mo>&rharu;</mo></mover> 
+			<mi>(t)</mi>
+			<mo>d</mo><mi>t</mi>
+			<mo>+</mo>
+			<msub><mover><mi>r</mi><mo>&rharu;</mo></mover><mn>0</mn></msub>
+			<mo>=</mo>
+			<mfrac><mn>1</mn><mn>2</mn></mfrac>
+			<msub><mover><mi>a</mi><mo>&rharu;</mo></mover><mn>0</mn></msub>
+			<mo>&middot;</mo>
+			<msup><mi>t</mi><mn>2</mn></msup>
+			<mo>+</mo>
+			<msub><mover><mi>v</mi><mo>&rharu;</mo></mover><mn>0</mn></msub>
+			<mo>&middot;</mo>
+			<mi>t</mi>
+			<mo>+</mo>
+			<msub><mover><mi>r</mi><mo>&rharu;</mo></mover><mn>0</mn></msub>
+		</math>
+		<p>
+			where 
+			<math>
+				<msub><mover><mi>v</mi><mo>&rharu;</mo></mover><mn>0</mn></msub>
+			</math>
+			and
+			<math>
+				<msub><mover><mi>r</mi><mo>&rharu;</mo></mover><mn>0</mn></msub>
+			</math>
+			are constants of integration that describe the intial velocity and position of the particle.
+		</p>
+		<p>
+			The motion takes place in a plane that is spanned by the vectors 
+			<math>
+				<msub><mover><mi>v</mi><mo>&rharu;</mo></mover><mn>0</mn></msub>
+			</math>
+			and 
+			<math>
+				<msub><mover><mi>a</mi><mo>&rharu;</mo></mover><mn>0</mn></msub>
+			</math>.
+		</p>
+		<p>
+			The motion is composed of a linearly accelerated motion and a uniform motion, 
+			so that the combination results in a parabolic trajectory.
+		</p>
+		
+		<h4>Uniform circular motion</h4>
+		<p>
+			The particle moves inside the xy-plane on a circle centered at the origin with radius <math><mi>R</mi></math>.
+		</p>
+		<p>
+			In polar coordinates, only the angle 
+			<math>
+				<mi>&phi;</mi><mo>=</mo><mi>&omega;</mi><mi>t</mi><mo>+</mo><msub><mi>&phi;</mi><mn>0</mn></msub>
+			</math>
+			changes at a constant angular velocity <math><mi>&omega;</mi></math>:
+		</p>
+		<math>
+			<mover><mi>r</mi><mo>&rharu;</mo></mover>
+			<mi>(t)</mi>
+			<mo>=</mo>
+			<mi>R</mi>
+			<mfenced open="(" close=")">
+				<mtable>
+					<mtr><mtd>
+						<mo>cos</mo><mo>(</mo><mi>&omega;</mi><mi>t</mi><mo>+</mo><msub><mi>&phi;</mi><mn>0</mn></msub><mo>)</mo>
+					</mtd></mtr>
+					<mtr><mtd>
+						<mo>sin</mo><mo>(</mo><mi>&omega;</mi><mi>t</mi><mo>+</mo><msub><mi>&phi;</mi><mn>0</mn></msub><mo>)</mo>
+					</mtd></mtr>
+				</mtable>
+			</mfenced>
+		</math>
+		<br>
+		<math>
+			<mover><mi>v</mi><mo>&rharu;</mo></mover>
+			<mi>(t)</mi>
+			<mo>=</mo>
+			<mi>&omega;</mi>
+			<mi>R</mi>
+			<mfenced open="(" close=")">
+				<mtable>
+					<mtr><mtd>
+						<mo>-</mo><mo>sin</mo><mo>(</mo><mi>&omega;</mi><mi>t</mi><mo>+</mo><msub><mi>&phi;</mi><mn>0</mn></msub><mo>)</mo>
+					</mtd></mtr>
+					<mtr><mtd>
+						<mo>cos</mo><mo>(</mo><mi>&omega;</mi><mi>t</mi><mo>+</mo><msub><mi>&phi;</mi><mn>0</mn></msub><mo>)</mo>
+					</mtd></mtr>
+				</mtable>
+			</mfenced>
+		</math>
+		<br>
+		<math>
+			<mover><mi>a</mi><mo>&rharu;</mo></mover>
+			<mi>(t)</mi>
+			<mo>=</mo>
+			<mo>-</mo>
+			<msup><mi>&omega;</mi><mn>2</mn></msup>
+			<mi>R</mi>
+			<mfenced open="(" close=")">
+				<mtable>
+					<mtr><mtd>
+						<mo>cos</mo><mo>(</mo><mi>&omega;</mi><mi>t</mi><mo>+</mo><msub><mi>&phi;</mi><mn>0</mn></msub><mo>)</mo>
+					</mtd></mtr>
+					<mtr><mtd>
+						<mo>sin</mo><mo>(</mo><mi>&omega;</mi><mi>t</mi><mo>+</mo><msub><mi>&phi;</mi><mn>0</mn></msub><mo>)</mo>
+					</mtd></mtr>
+				</mtable>
+			</mfenced>
+			<mo>=</mo>
+			<mo>-</mo>
+			<msup><mi>&omega;</mi><mn>2</mn></msup>
+			<mover><mi>r</mi><mo>&rharu;</mo></mover>
+			<mi>(t)</mi>
+		</math>
+		<p>
+			The motion is periodic with a period <math><mi>T</mi><mo>=</mo><mn>2&pi;</mn><mo>/</mo><mi>&omega;</mi></math> so that 
+			<math>
+				<mover><mi>r</mi><mo>&rharu;</mo></mover>
+					<mo>(</mo><mi>t</mi><mo>+</mo><mi>T</mi><mo>)</mo>
+				<mo>=</mo>
+				<mover><mi>r</mi><mo>&rharu;</mo></mover>
+					<mo>(</mo><mi>t</mi><mo>)</mo>
+			</math>
+		</p>
+		<p>
+			Because the acceleration is perpendicular to the direction of motion, 
+			only the direction of movement changes, not the speed.
+		</p>
+		<p>
+			The absolute values of the position <math><mi>r</mi><mo>=</mo><mi>R</mi></math>,
+			velocity <math><mi>v</mi><mo>=</mo><mi>&omega;</mi><mi>R</mi></math>
+			and acceleration <math><mi>a</mi><mo>=</mo><msup><mi>&omega;</mi><mn>2</mn></msup><mi>R</mi></math>
+			are constants.
+		</p>
+		<h3>Problems</h3>
+		<h4>River crossing</h4>
+		<p>
+			A ferry commutes between two points A and B on different sides of a river.
+		</p>
+		<p>
+			The river has a width of 400 meters and the point B is located 400 meters downstream from the point A.
+		</p>
+		<p>
+			The river has a flow rate of 2 meters per second. The boat cruises at a speed of 5 meters per second relative to the water.
+		</p>
+		<p>
+			How long does the ferry take to travel between the two points?
+		</p>
+		<h4>Range of artillery</h4>
+		<p>
+			A medieval cannon shoots cannon balls at a velocity of 200 meters per second.
+		</p>
+		<p>
+			What is the maximum range of the cannon when firing at the optimum firing angle?
+		</p>
+		<p>
+			Gravity acceleration is 10 meters per second.
+		</p>
+	</body>
+</html>
